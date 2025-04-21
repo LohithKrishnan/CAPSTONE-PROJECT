@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Movie Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: black;
+            position: relative;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: black;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('https://www.tvguide.com/a/img/resize/e466cb2c326f24a6d1e090b9ef51f7c1331bb253/hub/2019/06/28/84e57af2-d6fb-4920-99c2-0542568646bd/190627-strangerthings3.jpg?auto=webp&fit=crop&height=1080&width=1920') no-repeat center center/cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+            display: flex;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .movie-details {
+            max-width: 500px;
+        }
+
+        .movie-title {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .movie-meta {
+            font-size: 16px;
+            opacity: 0.8;
+            margin: 10px 0;
+        }
+
+        .movie-description {
+            font-size: 14px;
+            margin: 15px 0;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+	footer {
+    	    background-color: black;
+            color: gray;
+    	    padding: 40px 20px;
+    	    text-align: center;
+        }
+
+	.footer-container {
+    	    max-width: 800px;
+    	    margin: auto;
+	}
+
+	.footer-links {
+    	    display: flex;
+    	    flex-wrap: wrap;
+    	    justify-content: center;
+    	    margin: 20px 0;
+	}
+
+	.footer-links a {
+    	    color: gray;
+   	    text-decoration: none;
+    	    margin: 10px 15px;
+    	    font-size: 14px;
+	}
+
+	.footer-links a:hover {
+    	    text-decoration: underline;
+	}	
+
+	.language-selector select {
+    	    padding: 5px;
+    	    background: black;
+    	    color: white;
+    	    border: 1px solid gray;
+    	    margin-top: 10px;
+	}
+
+	.footer-note {
+    	    margin-top: 10px;
+    	    font-size: 14px;
+	}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">NETFLIX</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="signup.html">Log out</a>
+            <a href="help.html">Help</a>
+            <a href="tvshows.html">TV Shows</a>
+            <a href="movies.html">Movies</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div> 
+
+    <div class="hero">
+        <div class="hero-overlay">
+            <div class="movie-details">
+                <div class="movie-title">Stranger Things</div>
+                <div class="movie-meta">2016 | U/A 16+ | 4 seasons | Horror</div>
+                <div class="movie-description">
+                    In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.
+                </div>
+                <div class="movie-meta"><strong>Starring:</strong> Millie Bobby Brown, Joe Keery, David Harbour</div>
+                <div class="cta-buttons">
+                    <a href="video.mp4">Watch now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="footer-container"><br></br><br>
+        <p>Questions? Call <a href="#">000-800-919-1694</a></p>
+        <div class="footer-links">
+            <a href="help.html">FAQ</a>
+            <a href="help.html">Help Center</a>
+            <a href="help.html">Account</a>
+            <a href="help.html">Media Center</a>
+            <a href="help.html">Investor Relations</a>
+            <a href="help.html">Jobs</a>
+            <a href="help.html">Ways to Watch</a>
+            <a href="help.html">Terms of Use</a>
+            <a href="help.html">Privacy</a>
+            <a href="help.html">Cookie Preferences</a>
+            <a href="help.html">Corporate Information</a>
+            <a href="help.html">Contact Us</a>
+            <a href="help.html">Speed Test</a>
+            <a href="help.html">Legal Notices</a>
+            <a href="help.html">Only on Netflix</a>
+        </div>
+        <div class="language-selector">
+            <select>
+                <option>English</option>
+                <option>हिन्दी</option>
+            </select>
+        </div>
+        <p class="footer-note">Netflix India</p>
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
